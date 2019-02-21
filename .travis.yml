@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "9"
+  - node
 dist: trusty
 sudo: false
 
@@ -17,7 +17,6 @@ addons:
 
 script:
   - npm run lint
-  - npm run test:headless
   - npm run build
   - xvfb-run npm run e2e
   - mv dist/bartoutofthebox-homepage/index.html dist/bartoutofthebox-homepage/404.html
