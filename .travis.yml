@@ -12,14 +12,16 @@ cache:
   directories:
     - node_modules
 
-install:
-  - npm install -g yarn
-  - npm install -g angular-cli
+addons:
+  chrome: stable
 
 script:
-  - yarn lint
-  - yarn build --base-href /bartoutofthebox-homepage/
+  - npm run lint
+  - npm run test:headless
+  - npm run build
+  - xvfb-run npm run e2e
   - mv dist/bartoutofthebox-homepage/index.html dist/bartoutofthebox-homepage/404.html
+
 deploy:
   provider: pages
   skip_cleanup: true
