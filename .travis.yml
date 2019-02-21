@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "9"
+  - node
 dist: trusty
 sudo: false
 
@@ -12,13 +12,15 @@ cache:
   directories:
     - node_modules
 
-install:
-  - npm install -g yarn
+addons:
+  chrome: stable
 
 script:
-  - yarn lint
-  - yarn build --base-href /bartoutofthebox-homepage/
+  - npm run lint
+  - npm run build
+  - xvfb-run npm run e2e
   - mv dist/bartoutofthebox-homepage/index.html dist/bartoutofthebox-homepage/404.html
+
 deploy:
   provider: pages
   skip_cleanup: true
