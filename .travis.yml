@@ -20,6 +20,7 @@ script:
   - npm run build-deploy -- --base-href $DEPLOY_BASE_HREF
   - xvfb-run npm run e2e
   - cp dist/bartoutofthebox-homepage/index.html dist/bartoutofthebox-homepage/404.html
+  - echo $DEPLOY_CNAME > dist/bartoutofthebox-homepage/CNAME
 
 deploy:
   provider: pages
