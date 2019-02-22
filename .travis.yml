@@ -17,7 +17,7 @@ addons:
 
 script:
   - npm run lint
-  - npm run build-deploy
+  - npm run build-deploy -- --base-href $DEPLOY_BASE_HREF
   - xvfb-run npm run e2e
   - cp dist/bartoutofthebox-homepage/index.html dist/bartoutofthebox-homepage/404.html
 
