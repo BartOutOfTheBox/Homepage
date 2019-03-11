@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MediaButtonsComponent implements OnInit {
 
-  BUTTONS: String[] = [
+  BUTTONS: string[] = [
     'twitter',
     'github',
     'instapaper',
