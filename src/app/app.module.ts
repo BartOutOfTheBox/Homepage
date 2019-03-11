@@ -8,13 +8,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
 import { CoverComponent } from './cover/cover.component';
 import { FooterComponent } from './footer/footer.component';
+import { MediaButtonsComponent } from './media-buttons/media-buttons.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CoverComponent,
-    FooterComponent
+    FooterComponent,
+    MediaButtonsComponent
   ],
   imports: [
     BrowserModule,
