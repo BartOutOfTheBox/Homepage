@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class MediaButtonsComponent implements OnInit {
 
   BUTTONS: String[] = [
-    'facebook',
     'twitter',
     'github',
-    'phone'
+    'instapaper',
+    'facebook'
   ];
 
   constructor() { }
